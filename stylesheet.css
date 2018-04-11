@@ -1,0 +1,88 @@
+/* Remove the navbar's default margin-bottom and rounded borders */ 
+    .navbar {
+	  background-color: #522398;
+      margin-bottom: 0;
+      border-radius: 0;
+	  background-color: #522398;
+    }
+    
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+    
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 200%;
+    }
+    .sidenav2 {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 200%;
+      float: right;
+    }
+    
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      padding: 15px;
+    }
+    
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;} 
+    }
+
+    .offenderDetail table,td {
+      padding-left:10px;
+      padding-right: 2px;
+      border: 1px solid black;
+     }
+     .offenderDetail thead{
+       font-weight: bolder;
+     }
+
+     #Input {
+      width: 20%; 
+      height: 25px;
+      font-size: 13px; 
+      padding: 12px 20px 12px 40px; 
+      border: 1px solid #ddd; 
+      margin-top: 6px;
+  }
+
+  #select{
+    width: 20%; 
+    height: 30px;
+    font-size: 13px; 
+    margin-top: 6px;
+    float: right;
+    clear: both;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    padding: 5px;
+  }
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .StopQuery {
+    margin: auto;
+  }
+
+/*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+ 
+#stopChart{
+  width: 100%;
+}
