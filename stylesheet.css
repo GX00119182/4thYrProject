@@ -1,39 +1,43 @@
 /* Remove the navbar's default margin-bottom and rounded borders */ 
     .navbar {
-	  background-color: #522398;
-      margin-bottom: 0;
-      border-radius: 0;
-	  background-color: #522398;
+    margin-bottom: 0;
+    border-radius: 0;
+    background-color: #522398;
+    text-decoration-color: white;
     }
     
+    .footer{
+      height: 50px;
+      width: 100%;
+      background-color: #522398;
+      border: 1px solid white;
+      border-radius: 5px;
+      bottom: 0;
+    }
+
+    a{
+      color: white;
+    }
+
+    #foot{
+      padding-top: 10px;
+      padding-left: 10px;
+      color: white;
+    }
     /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
-    .row.content {height: 450px}
+    .row.content {height: 100%}
     
-    /* Set gray background color and 100% height */
-    .sidenav {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 200%;
+    body{
+      height: 100%;
     }
-    .sidenav2 {
-      padding-top: 20px;
-      background-color: #f1f1f1;
-      height: 200%;
-      float: right;
+
+    .container-fluid{
+     height: 100%;
     }
     
-    /* Set black background color, white text and some padding */
-    footer {
-      background-color: #555;
-      padding: 15px;
-    }
     
-    /* On small screens, set height to 'auto' for sidenav and grid */
+    /* On small screens, set height to 'auto' */
     @media screen and (max-width: 767px) {
-      .sidenav {
-        height: auto;
-        padding: 15px;
-      }
       .row.content {height:auto;} 
     }
 
@@ -52,6 +56,7 @@
       font-size: 13px; 
       padding: 12px 20px 12px 40px; 
       border: 1px solid #ddd; 
+      border-radius: 3px;
       margin-top: 6px;
   }
 
@@ -61,28 +66,103 @@
     font-size: 13px; 
     margin-top: 6px;
     float: right;
-    clear: both;
+    
+  }
+
+  .offenderDetail table{
+    width: 100%;
   }
   
   .grid-container {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    padding: 5px;
+    border: 1px solid white;
+    border-radius: 5px;
+    grid-template-columns: 50% 50%;
+    background-color: #522398;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
   .grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 10px;
+    border-radius: 2px;
+    padding-top: 10px;
+    margin-left: 1em;
+    margin-right: 1em;
     font-size: 15px;
-    text-align: center;
+    text-align: left;
+    height: 200px;
   }
+
+  .grid-text{
+    padding-top: 10px;
+   text-align: center;
+  }
+
+ 
 
   .StopQuery {
     margin: auto;
+    padding-top: 2em;
+  }
+
+  #myInput{
+    height: 35px;
+    width: 250px;
+    border: 1px solid grey;
+    border-radius: 3px;
+  }
+
+  #myBtn{
+    background-color: #522398;
+    border: 1px solid white;
+    height: 35px;
+    border-radius: 3px;
+    color: white;
   }
 
 /*  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
  
+.charts{
+  background-color: #E5E5E5;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-bottom: 5px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.charts h4{
+  padding-left: 20px;
+  color: black;
+}
 #stopChart{
-  width: 100%;
+  width: 95%;
+  height: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+#stopChart2{
+  width: 95%;
+  height: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+#stopChart3{
+  width: 95%;
+  height: 300px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.analysis{
+width:100%; 
+min-width: fit-content;
+min-height: fit-content;
+
 }

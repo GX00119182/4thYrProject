@@ -6,10 +6,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="C:\Users\gavin_000\Documents\4thYearProj2018\stylesheet.css">
+  <link rel="stylesheet" href="C:\Users\gavin_000\Documents\4thYearProj2018\public1\stylesheet.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase-database.js"></script>
   <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -25,15 +26,15 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">Logo</a>
+        <a class="navbar-brand" href="#">Fare Evasion Analyzer</a>
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li>
-            <a href="C:\Users\gavin_000\Documents\4thYearProj2018\Index.html">Home</a>
+            <a href="C:\Users\gavin_000\Documents\4thYearProj2018\public1\index.html">Home</a>
           </li>
           <li class="active">
-            <a href="C:\Users\gavin_000\Documents\4thYearProj2018\AnalyticsDash.html">Analytics</a>
+            <a href="C:\Users\gavin_000\Documents\4thYearProj2018\public1\AnalyticsDash.html">Analytics</a>
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -45,15 +46,11 @@
       </div>
     </div>
   </nav>
-
   <div class="container-fluid text-center">
     <div class="row content">
-      <div class="col-sm-2 sidenav">
-      </div>
-      <div class="col-sm-8 text-left">
+      <div class="col-sm-12 text-left">
         <input type="text" id="Input" placeholder="Search keywords..">
-        <select class="form-control" id="select" onclick="stopFinder(this)">
-          <option value="">Filter by Stop</option>
+        <select class="form-control" id="select" onselect="stopFinder()">
           <option value="All">All</option>
           <option value="Kylemore">Kylemore</option>
           <option>Red Cow</option>
@@ -99,33 +96,43 @@
           };
           firebase.initializeApp(config);
         </script>
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="C:\Users\gavin_000\Documents\4thYearProj2018\public1\script.js"></script>
         <hr>
+        <div class="analysis">
+        <h2>Data Analysis</h2>
         <div class="grid-container">
-          <div class="grid-item">
-            <h4>Enter Stop To Calculate Percentage Of Offenders:</h2>
-              <input id="myInput" onfocus="this.value=''" value="Enter here to calculate">
-              <button id="myBtn" onclick="CalcPercentagePerStop()">Calculate</button>
-              <div class="StopQuery">
-                <p>Percentage of people who have offended from here:</p>
-                <p id="k">
-                  <!---Value goes here---->
-                </p>
-              </div>
+          <div class="grid-item" id="gridItem1">
+            <div class="grid-text">
+                <h4>Enter Stop To Calculate Percentage Of Offenders:</h2>
+                  <input id="myInput" onfocus="this.value=''" value="Enter here to calculate">
+                  <button id="myBtn" onclick="CalcPercentagePerStop()">Calculate</button>
+                  <div class="StopQuery">
+                    <p id= "k"></p>
+                  </div>
+            </div>
+           
           </div>
-          <div class="grid-item">2</div>
-          <div class="grid-item">3</div>
+          <div class="grid-item" id="gridItem2">2</div>
         </div>
         <hr>
-        <h4>Offences Per Stop</h4>
-        <div id="stopChart"></div>
-        
+        <div class="charts">
+          <div id="stopChart"></div>
+          <hr>
+        <div id="stopChart2"></div>
+        <hr>
+        <div id="stopChart3"></div>
+        </div>
       </div>
-      <hr>
-      <div class="col-sm-2 sidenav2">
+        
+
       </div>
     </div>
-  </div>  
+  </div>
+  </div>
 </body>
-
+<footer class="footer fixed-bottom">
+    <div id="foot">
+        <p>Created By: X00119182</p>
+    </div>
+  </footer>
 </html>
